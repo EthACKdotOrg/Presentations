@@ -185,15 +185,43 @@ Et le tracking constant !
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-{Bullshit-o-mètre}
-\begin{itemize}
-\item Hébergé en Suisse
-\item Chiffrement de grade militaire
-\item Notre logiciel breveté
-\item Notre algorithme révolutionnaire
-\end{itemize}
+\begin{frame}  
+       \begin{tabular}{cl}  
+         \begin{tabular}{c}
+           \includegraphics[width=3.5cm,keepaspectratio]{./bullshit-meter.jpg}
+           \end{tabular}
+           & \begin{tabular}{l}
+             \parbox{0.5\linewidth}{%  change the parbox width as appropiate
+			\begin{itemize}
+				\item Hébergé en Suisse
+				\item Chiffrement de grade militaire
+				\item Notre logiciel breveté
+				\item Notre algorithme révolutionnaire
+			\end{itemize}
+    }
+         \end{tabular}  \\
+\end{tabular}
 \end{frame}
+
+{
+\hypersetup{
+        colorlinks=true,
+        linkcolor=white,
+        urlcolor=white
+}
+\setbeamertemplate{headline} {
+        \begin{beamercolorbox}[wd=\paperwidth,dp=8pt,ht=12pt,leftskip=.29cm,rightskip=.29cm]{linecolor}
+        Source: \textbf{\href{http://ghostpgp.com/}{GhostPGP}}
+        \hfill
+        \insertinstitute
+        \end{beamercolorbox}%
+}
+\begin{frame}
+\centering
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./military-grade.jpg} 
+\end{frame}
+}
+
 
 \begin{frame}
 {Alternatives ouvertes au commercial fermé}
