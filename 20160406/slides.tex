@@ -9,6 +9,25 @@
   \titlepage
 \end{frame}
 
+{
+\hypersetup{
+        colorlinks=true,
+        linkcolor=white,
+        urlcolor=white
+}
+\setbeamertemplate{headline} {
+        \begin{beamercolorbox}[wd=\paperwidth,dp=8pt,ht=12pt,leftskip=.29cm,rightskip=.29cm]{linecolor}
+        \hfill
+        \insertinstitute
+        \end{beamercolorbox}%
+}
+\begin{frame}
+\centering
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./aspirateur.jpg} 
+\note{Qui tient le manche ?}
+\end{frame}
+}
+
 \begin{frame}
 {Plan rapide}
 \begin{itemize}
@@ -31,6 +50,8 @@
 \note[item]{Nom, prénom, adresse, etc}
 \item Données personnelles "Privées"
 \note[item]{Photos, emploi du temps, etc}
+\item Données personnelles "Sensibles"
+\note[item]{Idéologie politique, convictions religieuses, appartenance à certains groupes, etc}
 \end{itemize}
 \end{frame}
 
@@ -47,6 +68,75 @@
 \end{frame}
 
 \begin{frame}
+{Cas particulier : les photos}
+\begin{itemize}
+\item Geotags
+\note[item]{Position géographique}
+\item Date et heure
+\note[item]{Quand étiez-vous là ?}
+\item Modèle de l'appareil
+\note[item]{Potentiellement votre train de vie}
+\end{itemize}
+\end{frame}
+
+{
+\hypersetup{
+        colorlinks=true,
+        linkcolor=white,
+        urlcolor=white
+}
+\setbeamertemplate{headline} {
+        \begin{beamercolorbox}[wd=\paperwidth,dp=8pt,ht=12pt,leftskip=.29cm,rightskip=.29cm]{linecolor}
+        Exemple de données EXIF
+        \hfill
+        \insertinstitute
+        \end{beamercolorbox}%
+}
+\begin{frame}
+\centering
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./exifs.png} 
+\end{frame}
+}
+
+{
+\hypersetup{
+        colorlinks=true,
+        linkcolor=white,
+        urlcolor=white
+}
+\setbeamertemplate{headline} {
+        \begin{beamercolorbox}[wd=\paperwidth,dp=8pt,ht=12pt,leftskip=.29cm,rightskip=.29cm]{linecolor}
+        Solution (partielle)
+        \hfill
+        \insertinstitute
+        \end{beamercolorbox}%
+}
+\begin{frame}
+\centering
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./1camera_location_data.jpg} 
+\end{frame}
+}
+
+{
+\hypersetup{
+        colorlinks=true,
+        linkcolor=white,
+        urlcolor=white
+}
+\setbeamertemplate{headline} {
+        \begin{beamercolorbox}[wd=\paperwidth,dp=8pt,ht=12pt,leftskip=.29cm,rightskip=.29cm]{linecolor}
+        Sous iOS aussi ;)
+        \hfill
+        \insertinstitute
+        \end{beamercolorbox}%
+}
+\begin{frame}
+\centering
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./ios-location.jpg} 
+\end{frame}
+}
+
+\begin{frame}
 {Utilité de ces données}
 \begin{itemize}
 \item Découverte de contacts
@@ -55,6 +145,8 @@
 \note[item]{Vos centres d'intérêt, promotion, etc}
 \item Garder le contact
 \note[item]{Une fois le réseau monté, il faut le maintenir}
+\item Pseudo vie sociale
+\note[item]{Ne nous voilons pas la face ;)}
 \end{itemize}
 \end{frame}
 
