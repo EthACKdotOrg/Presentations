@@ -1,6 +1,9 @@
 \documentclass[16pt]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage{pgfpages}
+\usepackage{chngpage}
+\usepackage{calc}
+\RequirePackage[absolute, overlay]{textpos}
 
 \title{Bonnes pratiques à l'ère du numérique}
 \setbeameroption{show notes on second screen=right}
@@ -46,7 +49,7 @@
 \end{itemize}
 \note<1>[item]{Sécurité (caméras de surveillance, etc)}
 \note<1>[item]{anecdote IoT empoyé dans le cadre du DDoS OVH (145'000 caméras)}
-\note<1>[item]{On va se concentrer sur "communication" et "loisirs" - sources de problèmes divers et variés}
+\note<1>[item]{On va se concentrer sur "communication" - source de problèmes divers et variés}
 \end{frame}
 
 \begin{frame}
@@ -62,6 +65,13 @@
 \item SMS
 \note<1>[item]{Plus tant employé, mais encore présent pour de l'authentification (e-banking par exemple)}
 \item Messageries instantanées
+\begin{itemize}
+\item Whatsapp
+\item Facebook Messenger
+\item Telegram
+\item Threema
+\item …
+\end{itemize}
 \note<1>[item]{Le truc actuel, passe par Internet, simple et efficace}
 \item E-Mails
 \note<1>[item]{Non, il n'y a pas que le spam…}
@@ -77,24 +87,28 @@
 \begin{frame}
 {Menaces sur la communication}
 \begin{itemize}
-\item Interception des contenus
-\item Modification des contenus
+\item Interception/modification des contenus
 \item Usurpation d'identité
-\item Perte de l'appareil
+\item Perte/vol de l'appareil
 \item Vol des codes d'accès
 \item …
 \note<1>[item]{Dans le cadre scolaire: usurpation + vol sont des gros risques}
 \note<1>[item]{Attention aux accès wifi "gratuits", "ouverts", etc}
+\note<1>[item]{Rappeler les proxy filtrants sur le réseau scolaire, avec la CA swisscom…}
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-{Menace principale : l'appareil}
+{Le plus courant (pour le moment)}
 \begin{itemize}
-\item Perte/vol
+\item Perte/vol (de l'appareil)
+\item Phishing (vol des identifiants/information)
 \item "Oublier" ouvert sur une table
 \item "Partage" de session
 \end{itemize}
+\note<1>{Rappeler qu'aucun service digne de ce nom ne demande les identifiants par mail…}
+\note<1>{Rappeler qu'un élève peut être assez dégourdi pour regarder le contenu}
+\note<1>{Noter en passant que l'interception légale va devenir monnaie courante (LRens)}
 \end{frame}
 
 \begin{frame}
@@ -102,42 +116,15 @@
 \center{
 L'appareil (ordinateur, smartphone, etc) fait strictement ce qu'on lui dit de faire}
 
-\vspace{3cm}
-
-(ou il plante)
 \note<1>[item]{L'utilisateur est seul responsable de l'usage qu'il en fait}
 \note<1>[item]{L'utilisateur doit protéger ses appareils}
-\note<1>[item]{Interaction: combien on un lock sur leur smartphone}
-\end{frame}
-
-\begin{frame}
-{Autre problème}
-\center
-Appareil personnel pour le boulot ?
-\note<1>{Mélanger le boulot et le privé n'est pas bon}
-\note<1>[item]{Données mélangées}
-\note<1>[item]{"Déconnexion" impossible}
-\note<1>[item]{Repos dérangé}
-\note<1>[item]{Intrusion des élèves dans la vie privée}
-\note<1>[item]{Possibles dérives}
+\note<1>[item]{Interaction: combien on un PIN sur leur smartphone}
 \end{frame}
 
 \begin{frame}
 {}
-\center
-Et les Réseaux Sociaux ?
-\note<1>[item]{Transfert de données personnelles (bidirectionnel)}
-\note<1>[item]{Quid de la neutralité/impartialité ?}
-\note<1>[item]{Possible "concours" entre élèves (cf Periscope)}
-\note<1>[item]{Implication plus personnelle/émotionnelle possible}
-\note<1>[item]{Interactif: combien sont "amis" avec leurs élèves sur Facebook}
-\end{frame}
-
-\begin{frame}
-{}
-\center
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{hobbies.jpg}
-\note<1>{Les hobbies font aussi partie des utilisations quotidiennes - pourquoi cela pourrait causer des problèmes ?}
+\includegraphics[width=\paperwidth,height=\paperheight]{bsod.png}
+\note<1>{Des fois, ça décide de planter, aussi}
 \end{frame}
 
 \begin{frame}
@@ -173,7 +160,18 @@ Et les Réseaux Sociaux ?
 \end{itemize}
 Le tout avec des données professionnelles, des accès, des informations, etc
 
-\note<1>{Sans parler de la séparation pro/privée — exemple du verre de minuit}1
+\note<1>{Sans parler de la séparation pro/privée — exemple du verre de minuit}
+\end{frame}
+
+\begin{frame}
+{}
+\center
+Et les Réseaux Sociaux ?
+\note<1>[item]{Transfert de données personnelles (bidirectionnel)}
+\note<1>[item]{Quid de la neutralité/impartialité ?}
+\note<1>[item]{Possible "concours" entre élèves (cf Periscope)}
+\note<1>[item]{Implication plus personnelle/émotionnelle possible}
+\note<1>[item]{Interactif: combien sont "amis" avec leurs élèves sur Facebook}
 \end{frame}
 
 \begin{frame}
