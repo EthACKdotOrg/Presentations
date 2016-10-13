@@ -1,0 +1,87 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=false,
+            linkcolor=black,
+            urlcolor=black,
+            citecolor=gray]{hyperref}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tabu}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhf{}
+
+\setlength{\headheight}{110pt} 
+\setlength{\parindent}{1cm}
+\linespread{1.3}
+
+\fancyhead[C]{EthACK.org}
+\fancyhead[L]{\raisebox{-0.5\height}{\includegraphics[height=1.5cm,keepaspectratio]{../common/logo_537.png}}}
+
+
+\def\chkb#1 { \CheckBox[width=2em,name=#1]{} }
+\def\grade#1#2 {
+	#1 & %
+	\chkb{excellent_#2} & \chkb{good_#2} & \chkb{medium_#2} & \chkb{bad_#2} & \chkb{verybad_#2} \\
+}
+
+\newdimen\longline
+\longline=\textwidth\advance\longline-4cm
+
+\def\LayoutTextField#1#2{#2} % override default in hyperref
+
+\def\lbl#1{\hbox to 4cm{#1\dotfill\strut}}%
+\def\labelline#1#2#3{\lbl{#1}\vbox{\hbox{\TextField[name=#3,width=#2]{\null}}\kern2pt\hrule}}
+
+\def\q#1#2{\hbox to \hsize{\labelline{#1}{\longline}{#2}}\vskip1.4ex}
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand*\contentsname{}
+\renewcommand{\abstractname}{}
+
+
+\begin{document}
+
+Vous avez récemment demandé à EthACK, association suisse à but non-lucratif, de faire une 
+présentation.
+
+Ce formulaire nous aidera à améliorer nos contenus de manière à toujours nous améliorer. Nous pensons que la communication autour des sujets sensibles tels que les données personnelles, la protection de la vie privée et les droits du citoyen numérique est importante, et doit être faite correctement pour atteindre le plus de monde possible.
+
+Merci d'avance pour votre retour que nous espérons constructif.
+
+\vspace{1cm}
+
+\begin{Form}[action={https://survey.ethack.org/survey}]
+
+\begin{tabu}{lccccc}
+	\rowfont{\bfseries\itshape\large} & Excellent & Bien & Moyen & Mauvais & Très mauvais \\
+	\hline
+	&&&&& \\
+	\grade{Présentateur}{talker}
+	\grade{Contenu}{content}
+	\grade{Support}{slides}
+	\grade{Diction}{talking}
+	\grade{Connaissances}{knowledge}
+	\grade{Interactions}{interactions}
+\end{tabu}\hfill
+\\
+
+\vspace{1cm}
+Les informations ci-dessous nous permettrons de vous recontacter en cas de questions. Nous ne transmettons rien à quiconque. \hfill
+\vspace{1cm}
+
+\q{Nom}{name}
+\q{Prénom}{firstname}
+\q{Adresse email}{email}
+\q{Date de la conférence}{date}
+
+\end{Form}
+\center
+Merci de nous transmettre le PDF complété à \href{mailto:survey@ethack.org}{survey@ethack.org}.
+
+\end{document}
