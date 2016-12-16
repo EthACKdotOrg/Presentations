@@ -1,0 +1,153 @@
+\documentclass[16pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfpages}
+\usepackage{chngpage}
+\usepackage{calc}
+\RequirePackage[absolute, overlay]{textpos}
+
+\title{All your databases belong to us}
+\setbeameroption{show notes on second screen=right}
+\input{../common/front}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+{Un sysadmin, c'est...}
+\begin{itemize}
+\item Le mec barbu qu'on ne voit jamais ou presque
+\item Le mec barbu qui râle sur les développeurs
+\item Le mec barbu sur lequel les développeurs râlent
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Mais pas que ;)}
+\begin{itemize}
+\item Firewall
+\item Updates
+\item configuration de services
+\item ... etc
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Pwnage : surface d'attaque}
+\begin{itemize}
+\item Service mal configuré
+\item Accès utilisateurs trop importants/mal gérés
+\item Application en "admin party"
+\item Faille de sécurité au niveau de l'application
+\item Faille de sécurité au niveau système/OS
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Réduction du champ}
+\begin{itemize}
+\item Application Web
+\item Serveur Linux
+\item Admin pas réveillé
+\item Développeur tout aussi peu réveillé
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+{Compromettre un système d'information}
+\begin{itemize}
+\item Repérer les applications web installées
+\item Repérer les versions
+\end{itemize}
+\note<1>[item]{README}
+\note<1>[item]{Changelog}
+\note<1>[item]{Autres fichiers courants (install, etc)}
+\end{frame}
+
+\begin{frame}
+{Faille détectée : exploitation}
+\centering
+On est dans la mouise...
+\end{frame}
+
+\begin{frame}
+{Exemple concret : phpMyAdmin}
+\begin{itemize}
+\item Très souvent présent
+\item Bourré de failles
+\item Rarement mis à jour et pris en compte
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Dernières "features"}
+\begin{itemize}
+\item CSRF
+\item XSS
+\item SQL Injection via nom de BDD
+\item Directory transversal (teste l'existence d'un fichier)
+\item MitM
+\item ......
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Autre exemple : Elasticsearch}
+\begin{itemize}
+\item Service configuré pour écouter par défaut sur toutes les interfaces
+\item Aucun mécanisme de sécurité
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Conséquences : exploitation possible !}
+\begin{itemize}
+\item Intégration dans un botnet
+\item Infection d'autres hosts du réseau
+\item Mapping réseau/infra
+\item Base pour attaques ultérieures contre l'infra
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Conséquences...}
+\begin{itemize}
+\item Vols de données
+\item Perte de clientèle
+\item Pertes de temps
+\item Blacklisting d'IPs, coupures réseau
+\item La fin du monde des Licornes
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+{Comment éviter ?}
+\begin{itemize}
+\item Communication (devops-bingo-buzz)
+\item Réduire la surface
+\item Communication (devops-bingo-buzz-bis)
+\item Bonnes pratiques
+\end{itemize}
+\note<1>[item]{Quels droits, quels ports, quels services}
+\note<1>[item]{Enlever les références de version, maintenir à jour, etc}
+\note<1>[item]{Cycle des mises à jour}
+\note<1>[item]{"Château-fort": mauvais (l'ennemi peut aussi être à l'intérieur); Blacklisting: mauvais (préférer whitelisting)}
+\end{frame}
+
+\begin{frame}
+{Et les attaques type Déni de service ?}
+\begin{itemize}
+\item "Scalabilité" de l'application
+\item Recherche des bottle-necks
+\end{itemize}
+\vspace{1cm}
+\centering
+Tests de charge et communication entre départements !
+\note<1>[item]{Note: un Déni de service peut ne pas être dû à une attaque...}
+\note<1>[item]{Scalabilité: capacité de l'appli à être distribuée sur plusieurs serveurs}
+\note<1>[item]{Stateless, etc, etc}
+\end{frame}
+
+
+\input{../common/foot}
+\end{document}
